@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const userContainer = document.getElementById("user-container");
 
@@ -21,17 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
       userAvatar.src = user.image;
       userDiv.appendChild(userAvatar);
 
-      const userInfo = document.createElement("div");
-
       const userName = document.createElement("p");
       userName.innerHTML = `<h2>${user.firstName} ${user.lastName}</h2>`;
-      userInfo.appendChild(userName);
+      userDiv.appendChild(userName);
 
       const userEmail = document.createElement("p");
       userEmail.innerHTML = `<strong>${user.email}</strong>`;
-      userInfo.appendChild(userEmail);
+      userDiv.appendChild(userEmail);
 
-      userDiv.appendChild(userInfo);
       userContainer.appendChild(userDiv);
     });
   }
